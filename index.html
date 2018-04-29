@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>footballApp</title>
+  <style>
+    #flex-container {
+      display: flex;
+      height: 92vh;
+      width: 90vw;
+      background-color: #d6d6cd;
+      margin: auto;
+      margin-top: 30px;
+      border-radius: 16px;
+      flex-direction: row;
+      padding: 15px;
+      box-sizing: border-box;
+    }
+
+    #pitch {
+      background-color: #588c4d;
+      width: 60%;
+      height: 100%;
+      border-radius: 8px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+    }
+
+    #players {
+      background-color: #f9f9e8;
+      width: 40%;
+      height: 100%;
+      border-radius: 8px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+    }
+
+    #results {
+      background-color: grey;
+      width: 80%;
+      height: 80%;
+      border-radius: 5px;
+      margin: auto;
+      overflow-y: scroll;
+      list-style-type: none;
+    }
+
+    #results > #midfielders, #keepers, #defenders, #forwards {
+      max-height: 60px;
+      overflow-y: scroll;
+      list-style-type: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="flex-container">
+    <div id="pitch">
+      Keeper:
+      <div id="keeper-selected"></div>
+      Defenders:
+      <div id="defender-selected"></div>
+      Midfielders:
+      <div id="midfielder-selected"></div>
+      Forwards:
+      <div id="forward-selected"></div>
+    </div>
+    <div id="players">
+      <!-- <button id="get-players">Get premierLeague players</button> -->
+      <p>Choose player based on preferred position:</p>
+      <button id="get-midfielders">Midfielders</button>
+      <button id="get-defenders">Defenders</button>
+      <button id="get-keepers">Goalkeepers</button>
+      <button id="get-forwards">Forwards</button>
+      <br />
+      <div id="results">
+        <div id="results-keeper"></div>
+        <div id="results-defender"></div>
+        <div id="results-midfielder"></div>
+        <div id="results-forward"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
